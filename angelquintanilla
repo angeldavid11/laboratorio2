@@ -1,0 +1,72 @@
+exports.square = function (s) {
+    return s * s;
+};
+exports.rectangle = function (b, h) {
+    return b * h;
+};
+exports.triangle = function (b, h) {
+    return b * h / 2;
+};
+exports.circle = function (r) {
+    return Math.PI * r * r;
+};
+exports.ellipse = function (a, b) {
+    return Math.PI * a * b;
+};
+function calcSurface(figure) {
+    var surfaces = require ('./surfaces.js');
+    process.stdin.resume();
+    process.stdin.setEncoding('utf8');
+    switch (figure) {
+        case 'square':
+            var value = line.trim()|0;
+            process.stdout.write(value * value);
+          };
+          process.stdin.on('data', function (chunk) {
+            var lines = (buffer + chunk).split('\n');
+            buffer = lines.pop();
+            lines.foreach(outputSquare);
+          }).on('end', function() {
+            outputSquare(buffer);
+          });
+            });
+            break;
+        case 'triangle':
+            process.stdout.write('Please enter the base and the height of a triangle, separated by a space: ');
+            process.stdin.on('data', function (chunk) {
+                var baseAndHeight = chunk.split(' ');
+                var base = parseFloat(baseAndHeight[0]);
+                var height = parseFloat(baseAndHeight[1]);
+                var surface = surfaces.triangle(base, height);
+                process.stdout.write('The surface of the triangle is ' + surface + ' square meters\n');
+                process.stdin.destroy();
+            });
+            break;
+        case 'rectangle':
+            \node[at={($(cuadrado.center)$)},anchor=center] (texto) {asd asd asd};
+
+            \end{tikzpicture}
+            \end{document}
+            });
+            break;
+        case 'circle':
+            process.stdout.write('Please enter the radius of a circle: ');
+            process.stdin.on('data', function (chunk) {
+                var lines = stdin.split('\n');
+                for(var i=0; i<lines.length; i++) {
+                  process.stdout.write(lines[i]);
+                }
+              })
+            });
+            break;
+        default:
+            process.stdout.write('You missed the option. Please try again.\n');
+            process.exit();
+            break;
+    }
+}
+calcSurface(process.argv[2]);
+process.on('exit', function() {
+    process.stdout.write('Until next time my friend!\n');
+});
+
